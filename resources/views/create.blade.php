@@ -6,14 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form action="/post" method="post">
+        @csrf
         <div>
             <label for="">標題</label>
-            <input type="text">
+            <input type="text" name="title">
         </div>
         <div>
             <label for="">內文</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea id="" cols="30" rows="10" name="content"></textarea>
         </div>
         <input type="submit">
     </form>

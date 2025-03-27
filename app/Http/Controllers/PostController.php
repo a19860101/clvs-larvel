@@ -13,7 +13,11 @@ class PostController extends Controller
     public function index()
     {
         //
-        return Post::get();
+        // return Post::get();
+        // return view('index')->with(['title'=>'我是標題','user'=>'JOHN']);
+
+        $posts = Post::get();
+        return view('index')->with(['posts'=>$posts]);
     }
 
     /**
@@ -31,10 +35,15 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+
+        // return $request->title;
+
         $post = new Post;
         $post->title = $request->title;
         $post->content = $request->content;
         $post->save();
+
+        return redirect('/post');
     }
 
     /**

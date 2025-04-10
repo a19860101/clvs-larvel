@@ -8,8 +8,13 @@
 <body>
     <a href="/post/create">新增資料</a>
     <div>
-
-        {{$posts}}
+        @foreach($posts as $post)
+        <h3>{{$post->title}}</h3>
+        <div>
+            {{$post->content}}
+        </div>
+        <hr>
+        @endforeach
     </div>
 </body>
 </html>

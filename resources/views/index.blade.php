@@ -16,7 +16,7 @@
         <form action="/post/{{$post->id}}" method="post">
             @csrf
             @method('delete')
-            <input type="submit" value="刪除">
+            <input type="submit" value="刪除" onclick="return confirm('確認刪除?')">
         </form>
         <hr>
         @endforeach

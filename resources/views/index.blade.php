@@ -13,6 +13,11 @@
         <div>
             {{$post->content}}
         </div>
+        <form action="" method="post">
+            @csrf
+            @method('delete')
+            <input type="submit" value="刪除">
+        </form>
         <hr>
         @endforeach
     </div>

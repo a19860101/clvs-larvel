@@ -13,7 +13,7 @@
         <div>
             {{$post->content}}
         </div>
-        <form action="" method="post">
+        <form action="/post/{{$post->id}}" method="post">
             @csrf
             @method('delete')
             <input type="submit" value="刪除">
